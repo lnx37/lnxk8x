@@ -1,0 +1,37 @@
+package util
+
+var SETTINGS = struct {
+	VERSION string
+	DEBUG   bool
+}{
+	VERSION: "20240729",
+	DEBUG:   false,
+}
+
+var ENV_SH string = `
+#!/bin/bash
+
+MASTER_IP_LIST=("172.22.23.70")
+
+WORKER_IP_LIST=("${MASTER_IP_LIST[0]}")
+
+ETCD_IP_LIST=("${MASTER_IP_LIST[0]}")
+
+KUBE_APISERVER_IP="${MASTER_IP_LIST[0]}"
+
+KUBERNETES_VERSION="v1.28.10"
+
+NETWORK_PLUGIN="flannel"
+
+CONTAINER_RUNTIME="containerd"
+
+KUBE_PROXY_MODE="ipvs"
+
+NETWORK_REGION="cn"
+
+OS_ARCH="amd64"
+
+DRY_RUN="no"
+
+SKIP_DOWNLOAD="no"
+`

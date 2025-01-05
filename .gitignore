@@ -1,0 +1,11 @@
+/artifact/
+/pkg/
+
+lnxk8x
+main
+
+# build.sh
+# sh2go.py
+sync.sh
+
+.tmp.sh
